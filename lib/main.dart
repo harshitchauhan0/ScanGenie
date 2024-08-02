@@ -19,7 +19,7 @@ void main() async {
     // await FirebaseApi().initNotifications();
     // await ScannedQRDatabaseProvider.instance.initialize();
 
-    runApp(const MyApp());
+    runApp(const Scangenie());
   } catch (e) {
     print('Error initializing app: $e');
   }
