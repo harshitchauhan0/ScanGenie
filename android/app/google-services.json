@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1043608474940",
+    "project_id": "scangenie-85651",
+    "storage_bucket": "scangenie-85651.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043608474940:android:a07eab3d87d0d508b03a39",
+        "android_client_info": {
+          "package_name": "com.example.scangenie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIdSgOMPhNlduiY_InmPgRXzV-KNhbA1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
