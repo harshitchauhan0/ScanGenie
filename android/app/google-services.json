@@ -1,26 +1,44 @@
 {
   "project_info": {
-    "project_number": "1043608474940",
-    "project_id": "scangenie-85651",
-    "storage_bucket": "scangenie-85651.appspot.com"
+    "project_number": "739962965980",
+    "project_id": "scangenie-b043f",
+    "storage_bucket": "scangenie-b043f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1043608474940:android:a07eab3d87d0d508b03a39",
+        "mobilesdk_app_id": "1:739962965980:android:bb41689c28e8caa07fc919",
         "android_client_info": {
           "package_name": "com.example.scangenie"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "739962965980-ka8rq2pufl6i1ubblmoe8tmlst45bj6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.scangenie",
+            "certificate_hash": "d12fc56bad3872a812869f63f8e2910f2785289a"
+          }
+        },
+        {
+          "client_id": "739962965980-d6k4rldco672o2tqv3ekfskoprt9uhp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyBIdSgOMPhNlduiY_InmPgRXzV-KNhbA1E"
+          "current_key": "AIzaSyCPkjb2DslQsT5Vr7cg1NeXMcaLbinc-ow"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739962965980-d6k4rldco672o2tqv3ekfskoprt9uhp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
