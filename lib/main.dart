@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 import 'package:scangenie/scangenie.dart';
+import 'package:scangenie/features/generate/providers/auth_provider.dart';
+import 'package:scangenie/features/scanai/providers/scan_ai_provider.dart';
+import 'data/repositories/db_history/scanned_qr_db/scanned_qr_database_provider.dart';
+import 'features/history/providers/history_provider.dart';
+import 'features/history/providers/scanned_history_provider.dart';
+import 'features/scan/providers/scan_provider.dart';
+import 'features/walkthrough/providers/onboarding/onboarding_provider.dart';
 
 void main() async {
   try {
@@ -17,9 +24,21 @@ void main() async {
           measurementId: "G-W4F8RZ8496"),
     );
     // await FirebaseApi().initNotifications();
-    // await ScannedQRDatabaseProvider.instance.initialize();
+    await ScannedQRDatabaseProvider.instance.initialize();
 
-    runApp(MultiProvider(providers: const [], child: const Scangenie()));
+    runApp(
+      MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => AuthProvider()),
+          ChangeNotifierProvider(create: (context) => OnBoardingProvider()),
+          ChangeNotifierProvider(create: (context) => ScanProvider()),
+          ChangeNotifierProvider(create: (context) => ScannedHistoryState()),
+          ChangeNotifierProvider(create: (context) => HistoryState()),
+          ChangeNotifierProvider(create: (context) => ScanAIProvider()),
+        ],
+        child: const Scangenie(),
+      ),
+    );
   } catch (e) {
     print('Error initializing app: $e');
   }
