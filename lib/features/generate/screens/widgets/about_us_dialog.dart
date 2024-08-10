@@ -61,7 +61,7 @@ class AboutUsDialogState extends State<AboutUsDialog>
           children: [
             const SizedBox(height: 10),
             Image.asset(
-              'assets/logos/scannify-logo.png',
+              'assets/logos/scangenie-logo.png',
               height: 40,
             ),
             const SizedBox(height: 15),

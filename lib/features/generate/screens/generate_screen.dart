@@ -12,7 +12,7 @@ import 'package:scangenie/utils/constants/colors.dart';
 import 'package:scangenie/utils/constants/sizes.dart';
 
 class GenerateScreen extends StatelessWidget {
-  const GenerateScreen({Key? key}) : super(key: key);
+  const GenerateScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class GenerateScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xffe7ebee),
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(

@@ -5,7 +5,7 @@ import 'package:scangenie/utils/constants/colors.dart';
 import 'package:scangenie/features/history/screens/history_screen.dart'; // Ensure you import the correct path
 
 class CustomPopupMenuButton extends StatelessWidget {
-  const CustomPopupMenuButton({Key? key}) : super(key: key);
+  const CustomPopupMenuButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +19,7 @@ class CustomPopupMenuButton extends StatelessWidget {
         if (value == 'About Us') {
           _showAboutUsDialog(context);
         } else if (value == 'More Apps') {
-          launch('https://play.google.com/store/apps/dev?id=8217403384611399596');
         } else if (value == 'Privacy and Policy') {
-          launch('https://sites.google.com/view/scannify');
         } else if (value == 'Backup') {
           _backupData(context);
         } else if (value == 'Restore') {
@@ -31,7 +29,7 @@ class CustomPopupMenuButton extends StatelessWidget {
       itemBuilder: (context) => [
         _customPopupMenuItem('Backup', Icons.backup_outlined),
         _customPopupMenuItem('Restore', Icons.restore),
-        PopupMenuDivider(),
+        const PopupMenuDivider(),
         _customPopupMenuItem('About Us', Icons.info_outline),
         _customPopupMenuItem('More Apps', Icons.apps_outlined),
         _customPopupMenuItem('Privacy and Policy', Icons.privacy_tip_outlined),
@@ -73,7 +71,7 @@ class CustomPopupMenuButton extends StatelessWidget {
   }
 
   void _backupData(BuildContext context) {
-    final historyScreen = HistoryScreen();
+    const historyScreen = HistoryScreen();
     historyScreen.backupDataToFirestore();
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Backup successful')),
@@ -81,7 +79,7 @@ class CustomPopupMenuButton extends StatelessWidget {
   }
 
   void _restoreData(BuildContext context) {
-    final historyScreen = HistoryScreen();
+    const historyScreen = HistoryScreen();
     historyScreen.restoreDataFromFirestore();
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Restore successful')),

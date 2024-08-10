@@ -40,7 +40,7 @@ class GoogleSignInAvatar extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.0),
           ),
           backgroundColor: Colors.white,
-          title: Text(
+          title: const Text(
             'Logout',
             style: TextStyle(
               color: AppColors.primary, // Custom text color
@@ -48,7 +48,7 @@ class GoogleSignInAvatar extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          content: Text(
+          content: const Text(
             'Are you sure you want to logout?',
             style: TextStyle(
               color: Colors.black,
@@ -60,7 +60,7 @@ class GoogleSignInAvatar extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text(
+              child: const Text(
                 'Cancel',
                 style: TextStyle(
                   color: AppColors.primary,
@@ -73,7 +73,7 @@ class GoogleSignInAvatar extends StatelessWidget {
                 Provider.of<AuthProvider>(context, listen: false).signOut();
                 Navigator.pop(context);
               },
-              child: Text(
+              child: const Text(
                 'Logout',
                 style: TextStyle(
                   color: Colors.red, // Custom logout button color
